@@ -195,8 +195,10 @@ const App = () => {
           and evolving.
         </p>
         <img src="src/assets/cloud.png" className="cloud1" />
-        <img src="src/assets/cloud1.png" className="cloud2" />
-        <img src="src/assets/cloud1.png" className="cloud3" />
+        <img src="src/assets/cloud.png" className="cloud2" />
+        <img src="src/assets/cloud.png" className="cloud3" />
+        <img src="src/assets/cloud.png" className="cloud4" />
+        <img src="src/assets/cloud.png" className="cloud5" />
         </div>
         </div>
       </section>

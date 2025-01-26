@@ -102,7 +102,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    height: 300vh;
+    height: 400vh;
     padding: 50px;
     
     position: relative;
@@ -128,7 +128,7 @@ body {
   font-style: normal;
     font-size: 8rem;
     margin-left: 8rem;
-    margin-top: -56rem;
+    margin-top: -40rem;
   }
   
   .home h2 {
@@ -170,17 +170,87 @@ body {
     margin-bottom: 9rem !important;
     margin-top: -10rem !important   ;
   }
-  /* About Section */
-  .cloud1{
+  /* eyes */
+  .eyes{
+    width:20rem;
+    height: 9rem;
+    margin-top: 20rem;
+    margin-left: 10rem;
+  }
+  .ctext{
+    position:relative;
+    top: -7.3rem;
+    right: -9.5rem !important;
+    
+  }
+  .ladder {
+    position: relative;
+    width: 10rem;
+    height: 70vh;
+    border-left: solid black;
+    border-right: solid black;
+    margin-left: 82rem;
+  }
+
+  /* Creating the top curve of the ladder */
+  .ladder::before {
+    content: '';
     position: absolute;
-    margin-left: 70rem;
+    top: -20px; /* Adjust this for how high you want the curve */
+    left: -25px; /* Adjust to center the curve above the ladder */
+    width: 100px; /* Width of the curved top */
+    height: 20px; /* Height of the curve */
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+     /* Same as ladder color */
+  }
+
+  /* Rungs of the ladder */
+  .rung {
+    position: absolute;
+    width: 100%;
+    height: 10px;
+    background-color: #000000; /* Rung color */
+  }
+
+  /* Spacing the rungs out evenly */
+  .rung:nth-child(1) {
+    top: 60px;
+  }
+  .rung:nth-child(2) {
+    top: 120px;
+  }
+  .rung:nth-child(3) {
+    top: 180px;
+  }
+  .rung:nth-child(4) {
+    top: 240px;
+  }
+  .rung:nth-child(5) {
+    top: 300px;
+  }
+  .rung:nth-child(6) {
+    top: 360px;
+  }
+  .rung:nth-child(7) {
+    top: 420px;
+  }
+   .rung:nth-child(8) {
+    top: 480px;
+  }
+  /* About Section */
+   .cloud1{
+    position: absolute;
+    margin-left: 36rem;
+    margin-top: -10rem;
     width: 60rem;
     height: 45rem;
     
   }
   .cloud2{
     position: absolute;
-    margin-left: 20rem;
+    margin-left: -10rem;
+    margin-top: -20rem;
     width: 60rem;
     height: 50rem;
     
@@ -188,32 +258,32 @@ body {
   .cloud3{
     position: absolute;
     margin-left: 10rem;
-    margin-top: 10rem;
+    margin-top: -20rem;
     width: 30rem;
     height: 25rem;
     z-index: -20;
   }
   .cloud4{
     position: absolute;
-    margin-left: 50rem;
-    margin-top: 10rem;
+    margin-left: 20rem;
+    margin-top: -20rem;
     width: 40rem;
     height: 25rem;
     z-index: -20;
   }
   .cloud5{
     position: absolute;
-    margin-left: -14rem;
-    margin-top: 10rem;
+    margin-left: -38rem;
+    margin-top: 26rem;
     width: 40rem;
     height: 29rem;
-    z-index: -1;
+    z-index: -4;
   }
-  /* Skills Section */
+  Skills Section */
   .skills {
     z-index: 20 !important;
     height: 100vh;
-    margin-top: -50rem;
+    margin-top: -30rem;
     padding: 50px 20px;
     background-color: #1c1c1c;
     color: #fff;

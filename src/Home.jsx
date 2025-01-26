@@ -33,7 +33,7 @@ const App = () => {
       scrollTrigger: {
         trigger: ".ball", // The section or element to track scrolling
         start: "top 9%", // Start when the top of the element is 10% from the viewport
-        end: "+=600", // End when the bottom of the element reaches 40% of the viewport
+        end: "+=1200", // End when the bottom of the element reaches 40% of the viewport
         scrub: true, // Enable smooth scrubbing based on scroll
         toggleActions: "restart none reverse pause", // Control the animation during scroll
         markers: true, // Show markers for debug (can be removed later)
@@ -89,9 +89,36 @@ const App = () => {
       motionPath: {
         path: [
           { x: -160, y: 760 }, 
-          { x: -160, y: 1060 }, 
+          { x: -160, y: 1160 }, 
           
         ],
+        autoRotate: true, // Keep the ball rotating along the path
+        ease: "power2.inOut", // Smooth transition after the bounce
+      },
+      duration: 10,
+    });
+
+    timeline.to(ball, {
+      motionPath: {
+        path: [
+          { x: -160, y: 1160 }, 
+          { x: -160, y: 1470 }, 
+          
+        ],
+        autoRotate: true, // Keep the ball rotating along the path
+        ease: "power2.inOut", // Smooth transition after the bounce
+      },
+      duration: 10,
+    });
+
+    timeline.to(ball, {
+      motionPath: {
+        path: [
+       
+          { x: -7, y: 1534 },
+          { x: 770, y: 1664 },
+        ],
+        
         autoRotate: true, // Keep the ball rotating along the path
         ease: "power2.inOut", // Smooth transition after the bounce
       },
@@ -194,6 +221,21 @@ const App = () => {
           my first website at 15, and since then, I've been constantly learning
           and evolving.
         </p>
+        <img src="src/assets/eyes.png" className="eyes" />
+        {/* eyes */}
+        <h2 className="ctext" ref={titleRef}>Create</h2>
+        <p className="jojo">My journey in tech started when I built my first website at 15, and since then, I've been constantly learning and evolving. I've worked with startups and established companies, helping them transform their ideas into reality through clean, efficient code and intuitive design.</p>
+        <div class="ladder">
+    <div class="rung"></div>
+    <div class="rung"></div>
+    <div class="rung"></div>
+    <div class="rung"></div>
+    <div class="rung"></div>
+    <div class="rung"></div>
+    <div class="rung"></div>
+    <div class="rung"></div>
+  </div>
+
         <img src="src/assets/cloud.png" className="cloud1" />
         <img src="src/assets/cloud.png" className="cloud2" />
         <img src="src/assets/cloud.png" className="cloud3" />

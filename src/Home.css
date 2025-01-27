@@ -183,12 +183,18 @@ body {
     right: -9.5rem !important;
     
   }
+  .jojo{
+    position: relative;
+    width: 36rem;
+    margin-right: -20rem;
+
+  }
   .ladder {
     position: relative;
     width: 10rem;
-    height: 70vh;
-    border-left: solid black;
-    border-right: solid black;
+    height: 68vh;
+    border-left: 3.5px solid #1f1f1f;
+    border-right: 3.5px solid #1f1f1f;
     margin-left: 82rem;
   }
 
@@ -200,7 +206,7 @@ body {
     left: -25px; /* Adjust to center the curve above the ladder */
     width: 100px; /* Width of the curved top */
     height: 20px; /* Height of the curve */
-    border-top-left-radius: 50px;
+    border-top-left-radius: 5px;
     border-top-right-radius: 50px;
      /* Same as ladder color */
   }
@@ -209,47 +215,45 @@ body {
   .rung {
     position: absolute;
     width: 100%;
-    height: 10px;
-    background-color: #000000; /* Rung color */
+    height: 8px;
+    background-color: #1f1f1f; /* Rung color */
+    border-radius: 3px;
   }
 
   /* Spacing the rungs out evenly */
   .rung:nth-child(1) {
-    top: 60px;
+    top: 80px;
   }
   .rung:nth-child(2) {
-    top: 120px;
+    top: 150px;
   }
   .rung:nth-child(3) {
-    top: 180px;
+    top: 220px;
   }
   .rung:nth-child(4) {
-    top: 240px;
+    top: 290px;
   }
   .rung:nth-child(5) {
-    top: 300px;
-  }
-  .rung:nth-child(6) {
     top: 360px;
   }
-  .rung:nth-child(7) {
-    top: 420px;
+  .rung:nth-child(6) {
+    top: 430px;
   }
-   .rung:nth-child(8) {
-    top: 480px;
+  .rung:nth-child(7) {
+    top: 500px;
   }
   /* About Section */
    .cloud1{
     position: absolute;
-    margin-left: 36rem;
-    margin-top: -10rem;
+    margin-left:-10rem;
+    margin-top: -16rem;
     width: 60rem;
-    height: 45rem;
+    height: 48rem;
     
   }
   .cloud2{
     position: absolute;
-    margin-left: -10rem;
+    margin-left: 23rem;
     margin-top: -20rem;
     width: 60rem;
     height: 50rem;
@@ -257,24 +261,24 @@ body {
   }
   .cloud3{
     position: absolute;
-    margin-left: 10rem;
-    margin-top: -20rem;
-    width: 30rem;
-    height: 25rem;
-    z-index: -20;
+    margin-left: 56rem;
+    margin-top: -17rem;
+    width: 60rem;
+    height: 42rem;
+    z-index: 20;
   }
   .cloud4{
     position: absolute;
-    margin-left: 20rem;
+    margin-left: 90rem;
     margin-top: -20rem;
-    width: 40rem;
-    height: 25rem;
+    width: 60rem;
+    height: 45rem;
     z-index: -20;
   }
   .cloud5{
     position: absolute;
-    margin-left: -38rem;
-    margin-top: 26rem;
+    margin-left: -18rem;
+    margin-top: -14rem;
     width: 40rem;
     height: 29rem;
     z-index: -4;

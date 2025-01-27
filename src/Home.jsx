@@ -233,7 +233,7 @@ const App = () => {
     <div class="rung"></div>
     <div class="rung"></div>
     <div class="rung"></div>
-    <div class="rung"></div>
+    
   </div>
 
         <img src="src/assets/cloud.png" className="cloud1" />

@@ -250,61 +250,95 @@ const App = () => {
   
         
       </div>
-
-      {/* Skills Section */}
-      <section id="skills" className="skills">
-        <h2>Skills & Expertise</h2>
-        <div className="skills-grid">
-          <div className="skill-item">
-            <img src="/assets/react-icon.png" alt="React" />
-            <h3>React</h3>
-          </div>
-          <div className="skill-item">
-            <img src="/assets/nodejs-icon.png" alt="Node.js" />
-            <h3>Node.js</h3>
-          </div>
-          <div className="skill-item">
-            <img src="/assets/python-icon.png" alt="Python" />
-            <h3>Python</h3>
-          </div>
-          <div className="skill-item">
-            <img src="/assets/aws-icon.png" alt="AWS" />
-            <h3>AWS</h3>
-          </div>
-        </div>
-      </section>
-
       {/* Projects Section */}
-      <section id="projects" className="projects">
-        <h2>Featured Projects</h2>
-        <div className="projects-grid">
-          <div className="project-card">
-            <img src="/assets/placeholder1.jpg" alt="Dashboard UI" />
-            <h3>Dashboard UI</h3>
-          </div>
-          <div className="project-card">
-            <img src="/assets/placeholder2.jpg" alt="E-commerce App" />
-            <h3>E-commerce App</h3>
-          </div>
+      <section id="projects" class="projects">
+  <div class="mypro">
+    <div class="card">
+      <div class="tools">
+        <div class="circle">
+          <span class="red box"></span>
         </div>
-      </section>
+        <div class="circle">
+          <span class="yellow box"></span>
+        </div>
+        <div class="circle">
+          <span class="green box"></span>
+        </div>
+      </div>
+      <div class="card__content">
+        <div class="project-card-1">
+          <img src="src/assets/Home Page.png" class="Agape" />
+          <h3>Dashboard UI</h3>
+        </div>  
+      </div>
+    </div>
 
-      {/* Contact Section */}
-      <section id="contact" className="contact">
-        <h2>Let's Work Together</h2>
-        <p>Have a project in mind? Let’s create something amazing.</p>
-        <div className="contact-icons">
+    <div class="card">
+      <div class="tools">
+        <div class="circle">
+          <span class="red box"></span>
+        </div>
+        <div class="circle">
+          <span class="yellow box"></span>
+        </div>
+        <div class="circle">
+          <span class="green box"></span>
+        </div>
+      </div>
+      <div class="card__content">
+        <div class="project-card-2">
+          <img src="src/assets/Landing Page.png" class="E-commerce" />
+          <h3>E-commerce App</h3>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="tools">
+        <div class="circle">
+          <span class="red box"></span>
+        </div>
+        <div class="circle">
+          <span class="yellow box"></span>
+        </div>
+        <div class="circle">
+          <span class="green box"></span>
+        </div>
+      </div>
+      <div class="card__content">
+        <div class="project-card-3">
+          <img src="src/assets/recipie.png" class="recipie" />
+          <h3>Recipe App</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    
+      {/* Footer */}
+      <footer className="footer">
+      
+      
+<form action="" class="form">
+    <p>
+    Lets Chat<span>Have a project in mind? Let’s create something amazing.</span>
+    </p>
+    <input type="email" placeholder="Email" className="email"></input>
+    <input type="chat" placeholder="Chat with me" className="chat"></input>
+    <button class="oauthButton">
+                    Continue
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 17 5-5-5-5"></path><path d="m13 17 5-5-5-5"></path></svg>
+                </button>
+                <div className="contact-icons">
           <a href="#" title="GitHub">🔗</a>
           <a href="#" title="LinkedIn">🔗</a>
           <a href="#" title="Twitter">🔗</a>
         </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="footer">
-        <p>
-          Built with ❤️ by <a href="#">Pranesh</a>
-        </p>
+</form>
+        
+        
       </footer>
     </div>
   );

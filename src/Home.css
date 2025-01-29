@@ -312,15 +312,73 @@ body {
     height: 60px;
     margin-bottom: 10px;
   }
-  
+  /* From Uiverse.io by EmmaxPlay */ 
+.card{
+  width: 190px;
+  height: 254px;
+  background-color: #3e3f3f;
+  border-radius: 8px;
+  z-index: 1;
+  margin-right: 20vw;
+  margin-left: 3rem;
+  margin-top: -10rem;
+ }
+ 
+ .tools {
+  display: flex;
+  align-items: center;
+  padding: 9px;
+ }
+ 
+ .circle {
+  padding: 0 4px;
+ }
+ 
+ .box {
+  display: inline-block;
+  align-items: center;
+  width: 10px;
+  height: 10px;
+  padding: 1px;
+  border-radius: 50%;
+ }
+ 
+ .red {
+  background-color: #ff605c;
+ }
+ 
+ .yellow {
+  background-color: #ffbd44;
+ }
+ 
+ .green {
+  background-color: #00ca4e;
+ }
+ 
   /* Projects Section */
   .projects {
-    padding: 50px 20px;
     background-color: #f4f4f4;
-    text-align: center;
+    height: 70vh;
+    display: flex;
+    justify-content: center; /* Centers the content horizontally in the section */
+   align-items: center;
+  }
+  .mypro{
+    display: flex;
+    flex-direction:row;
+    gap: 2rem; /* Add some space between the cards */
+  width: 100%;
+  }
+  .project-card-1,.project-card-2,.project-card-3{
+    width: 32rem;
+    height: 25rem;
+    overflow: hidden;
+  }
+  .Agape,.E-commerce,.recipie{
+    width:100%;
+    height: auto;
   }
   
-  /* Contact Section */
   .contact {
     padding: 50px 20px;
     background-color: #1c1c1c;
@@ -330,9 +388,131 @@ body {
   
   /* Footer */
   .footer {
-    padding: 20px;
-    background-color: #0e0e0e;
+    
+    background-color: #1c1c1c;
     color: #ccc;
     text-align: center;
   }
-  
+  /* From Uiverse.io by D3OXY */ 
+/* DEOXY Was Here */
+.form {
+  --background: #d3d3d3;
+  --input-focus: #2d8cf0;
+  --font-color: #323232;
+  --font-color-sub: #666;
+  --bg-color: #fff;
+  --main-color: #343455;
+  padding: 20px;
+  background: var(--background);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  border-radius: 5px;
+  border: 2px solid var(--main-color);
+  box-shadow: 4px 4px var(--main-color);
+}
+
+.form > p {
+  font-family: var(--font-DelaGothicOne);
+  color: var(--font-color);
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form > p > span {
+  font-family: var(--font-SpaceMono);
+  color: var(--font-color-sub);
+  font-weight: 600;
+  font-size: 17px;
+}
+.chat{
+  position: relative;
+  width: 30rem;
+  height: 10rem;
+}
+
+.oauthButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+    /* margin: 50px auto 0 auto; */
+  padding: auto 15px 15px auto;
+  width: 250px;
+  height: 40px;
+  border-radius: 5px;
+  border: 2px solid var(--main-color);
+  background-color: var(--bg-color);
+  box-shadow: 4px 4px var(--main-color);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--font-color);
+  cursor: pointer;
+  transition: all 250ms;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.oauthButton::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  background-color: #212121;
+  z-index: -1;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  transition: all 250ms;
+}
+
+.oauthButton:hover {
+  color: #e8e8e8;
+}
+
+.oauthButton:hover::before {
+  width: 100%;
+}
+
+.form > input{
+  width: 23rem;
+  height: 2rem;
+  border-radius: 5px;
+  border: 2px solid var(--main-color);
+  background-color: var(--bg-color);
+  box-shadow: 4px 4px var(--main-color);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--font-color);
+  padding: 5px 10px;
+  outline: none;
+}
+.form > input.chat {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: top;
+  width: 33rem;
+  height: 10rem;
+  border-radius: 5px;
+  border: 2px solid var(--main-color);
+  background-color: var(--bg-color);
+  box-shadow: 4px 4px var(--main-color);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--font-color);
+  padding: 5px 10px;
+  outline: none;
+}
+
+.icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}

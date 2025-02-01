@@ -117,6 +117,7 @@ body {
     margin-top: -4.7rem;
     background-color: #fff;
     box-shadow: inset -2px -5px 3px rgba(168, 24, 24, 0.925);
+    z-index: 30 !important;
   }
   .home-content {
     z-index: 1;
@@ -128,7 +129,7 @@ body {
   font-style: normal;
     font-size: 8rem;
     margin-left: 8rem;
-    margin-top: -40rem;
+    margin-top: -16rem;
   }
   
   .home h2 {
@@ -169,6 +170,14 @@ body {
     margin-left: 56rem !important;
     margin-bottom: 9rem !important;
     margin-top: -10rem !important   ;
+  }
+  .spline-container{
+    width: 28rem;
+    height: 20rem;
+    margin-bottom: -5rem;
+    margin-top: -20rem;
+    transform: translate3d(-300px, 0, 0);
+    z-index: -20;
   }
   /* eyes */
   .eyes{
@@ -218,6 +227,7 @@ body {
     height: 8px;
     background-color: #1f1f1f; /* Rung color */
     border-radius: 3px;
+    z-index: -10;
   }
 
   /* Spacing the rungs out evenly */

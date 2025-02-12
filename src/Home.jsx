@@ -6,6 +6,8 @@ import useBallAnimation from './useBallAnimation';
 import useTextAnimation from './useTextAnimation';
 import useLineAnimation from './useLineAnimation';
 import use3DObjectAnimation from './ObjectAnimation'; 
+import Scene from './Scene'
+import { Canvas } from '@react-three/fiber'
 import './Home.css';
 
 const App = () => {
@@ -116,10 +118,23 @@ const App = () => {
           <img src="src/assets/cloud.png" className="cloud5" />
         </div>
       </section>
-
+    <div className='model'>
+      <div className="eva"  style={{
+      zIndex: 22,
+      height: '19rem',
+      width: 'auto',
+      position: 'relative',
+      
+      
+    }} >
+         <Canvas>
+        <Scene />
+        </Canvas>
+      </div>
+    </div>
       {/* About Section */}
       <div id="about" className="about"></div>
-
+    
       {/* Projects Section */}
       <section id="projects" className="projects">
         <div className="mypro">

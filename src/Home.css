@@ -129,7 +129,9 @@ body {
   font-style: normal;
     font-size: 8rem;
     margin-left: 8rem;
-    margin-top: -16rem;
+    margin-top: -20rem;
+    
+    
   }
   
   .home h2 {
@@ -294,6 +296,15 @@ body {
     z-index: -4;
   }
   Skills Section */
+  /* Home.css or a shared CSS file */
+  div.momm{
+    z-index: 22 !important;
+    height: 30rem;
+    width: 20rem;
+    position: absolute;
+    background-color: #00ca4e !important;
+    color: #1e90ff !important;
+  }
   .skills {
     z-index: 20 !important;
     height: 100vh;
@@ -372,6 +383,7 @@ body {
     display: flex;
     justify-content: center; /* Centers the content horizontally in the section */
    align-items: center;
+   margin-top: 20rem;
   }
   .mypro{
     display: flex;
@@ -506,9 +518,10 @@ body {
 }
 .form > input.chat {
   display: flex;
-  justify-content: flex-start;
+  justify-content: start;
   align-items: flex-start;
-  text-align: top;
+  text-align: left;
+  vertical-align: top;
   width: 33rem;
   height: 10rem;
   border-radius: 5px;
@@ -525,4 +538,297 @@ body {
 .icon {
   width: 1.5rem;
   height: 1.5rem;
+}
+/* Original CSS remains the same until media queries */
+
+/* Media Queries */
+/* Large Devices (laptops/desktops, up to 1200px) */
+@media screen and (max-width: 1200px) {
+  .home h1 {
+    font-size: 6rem;
+    margin-left: 4rem;
+  }
+
+  .hand {
+    width: 30rem;
+    height: 28rem;
+    margin-left: 70rem;
+  }
+
+  .abp {
+    margin-left: 45rem !important;
+    width: 35rem;
+  }
+
+  .abm {
+    margin-left: 45rem !important;
+  }
+
+  .ladder {
+    margin-left: 65rem;
+  }
+
+  .cloud1, .cloud2, .cloud3, .cloud4, .cloud5 {
+    width: 45rem;
+    height: 35rem;
+  }
+
+  .mypro {
+    gap: 1rem;
+  }
+
+  .project-card-1, .project-card-2, .project-card-3 {
+    width: 28rem;
+    height: 22rem;
+  }
+}
+
+/* Medium Devices (tablets, up to 992px) */
+@media screen and (max-width: 992px) {
+  .header .nav {
+    margin-right: 1rem;
+  }
+
+  .header .nav a {
+    margin-left: 1.5rem;
+  }
+
+  .home h1 {
+    font-size: 5rem;
+    margin-left: 3rem;
+    margin-top: -12rem;
+  }
+
+  .home h2 {
+    margin-left: 3rem;
+  }
+
+  .line {
+    margin-left: -45rem;
+    width: 30rem;
+  }
+
+  .hand {
+    width: 25rem;
+    height: 23rem;
+    margin-left: 50rem;
+  }
+
+  .abp {
+    margin-left: 35rem !important;
+    width: 30rem;
+  }
+
+  .abm {
+    margin-left: 35rem !important;
+  }
+
+  .spline-container {
+    transform: translate3d(-200px, 0, 0);
+  }
+
+  .ladder {
+    margin-left: 45rem;
+  }
+
+  .mypro {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    margin: 1rem auto;
+  }
+
+  .project-card-1, .project-card-2, .project-card-3 {
+    width: 35rem;
+    height: 25rem;
+  }
+
+  .projects {
+    height: auto;
+    padding: 3rem 0;
+  }
+}
+
+/* Small Devices (phones, up to 768px) */
+@media screen and (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .header .nav {
+    margin-right: 0;
+    margin-top: 1rem;
+  }
+
+  .header .nav a {
+    margin-left: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .home h1 {
+    font-size: 4rem;
+    margin-left: 2rem;
+    margin-top: -8rem;
+  }
+
+  .home h2 {
+    margin-left: 2rem;
+    font-size: 1.2rem;
+  }
+
+  .line {
+    margin-left: -30rem;
+    width: 20rem;
+  }
+
+  .ball {
+    margin-left: 20rem;
+  }
+
+  .hand {
+    width: 20rem;
+    height: 18rem;
+    margin-left: 2rem;
+    margin-top: 25rem;
+  }
+
+  .abp {
+    margin-left: 2rem !important;
+    margin-top: 2rem !important;
+    width: 90%;
+  }
+
+  .abm {
+    margin-left: 2rem !important;
+    margin-top: 2rem !important;
+  }
+
+  .eyes {
+    width: 15rem;
+    height: 7rem;
+    margin-left: 5rem;
+  }
+
+  .ctext {
+    right: -5rem !important;
+  }
+
+  .jojo {
+    width: 90%;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  .ladder {
+    display: none; /* Hide ladder on mobile */
+  }
+
+  .cloud1, .cloud2, .cloud3, .cloud4, .cloud5 {
+    width: 30rem;
+    height: 25rem;
+  }
+
+  .project-card-1, .project-card-2, .project-card-3 {
+    width: 90%;
+    height: auto;
+  }
+
+  .form {
+    padding: 15px;
+  }
+
+  .form > input {
+    width: 90%;
+  }
+
+  .form > input.chat {
+    width: 90%;
+  }
+
+  .oauthButton {
+    width: 200px;
+  }
+}
+
+/* Extra Small Devices (small phones, up to 576px) */
+@media screen and (max-width: 576px) {
+  .home h1 {
+    font-size: 3rem;
+    margin-left: 1rem;
+  }
+
+  .home h2 {
+    margin-left: 1rem;
+    font-size: 1rem;
+  }
+
+  .line {
+    margin-left: -20rem;
+    width: 15rem;
+  }
+
+  .ball {
+    margin-left: 15rem;
+  }
+
+  .hand {
+    width: 15rem;
+    height: 13rem;
+    margin-left: 1rem;
+  }
+
+  .eyes {
+    width: 12rem;
+    height: 5rem;
+    margin-left: 2rem;
+  }
+
+  .cloud1, .cloud2, .cloud3, .cloud4, .cloud5 {
+    width: 20rem;
+    height: 15rem;
+  }
+
+  .header .nav a {
+    margin-left: 0.5rem;
+    font-size: 0.8rem;
+  }
+
+  .project-card-1, .project-card-2, .project-card-3 {
+    width: 95%;
+  }
+
+  .card {
+    width: 95%;
+    margin: 1rem auto;
+  }
+}
+
+/* Fix for very small devices (iPhone SE, Galaxy Fold, etc.) */
+@media screen and (max-width: 380px) {
+  .home h1 {
+    font-size: 2.5rem;
+  }
+
+  .header .nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .header .nav a {
+    margin-left: 0.3rem;
+    font-size: 0.75rem;
+  }
+
+  .form > p {
+    font-size: 16px;
+  }
+
+  .form > p > span {
+    font-size: 14px;
+  }
 }

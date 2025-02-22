@@ -297,14 +297,7 @@ body {
   }
   Skills Section */
   /* Home.css or a shared CSS file */
-  div.momm{
-    z-index: 22 !important;
-    height: 30rem;
-    width: 20rem;
-    position: absolute;
-    background-color: #00ca4e !important;
-    color: #1e90ff !important;
-  }
+ 
   .skills {
     z-index: 20 !important;
     height: 100vh;

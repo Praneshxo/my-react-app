@@ -118,17 +118,15 @@ const App = () => {
           <img src="src/assets/cloud.png" className="cloud5" />
         </div>
       </section>
-    <div className='model'>
+    <div id='scroll-container'>
       <div className="eva"  style={{
       zIndex: 22,
       height: '19rem',
       width: 'auto',
       position: 'relative',
-      
-      
     }} >
          <Canvas>
-        <Scene />
+          <Scene />
         </Canvas>
       </div>
     </div>

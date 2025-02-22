@@ -1,7 +1,6 @@
 import { useEffect, useRef } from 'react'
 import useSpline from '@splinetool/r3f-spline'
 import { OrthographicCamera } from '@react-three/drei'
-import { useFrame } from '@react-three/fiber'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
@@ -14,29 +13,60 @@ export default function Scene({ ...props }) {
   useEffect(() => {
     if (!modelRef.current) return
 
+    
     gsap.fromTo(
       modelRef.current.position,
-      { x: 71 },
+      { x: 91 },
       {
-        x: 0,
+        x: -70,
         scrollTrigger: {
           trigger: "#scroll-container",
-          start: "top top",
-          end: "bottom bottom",
+          start: "top 59%",
+          end: "+=400",
           scrub: true,
-          onUpdate: (self) => {
-            if (modelRef.current) {
-              modelRef.current.position.x = 71 - (self.progress * 71)
-            }
-          }
-        }
+          toggleActions: "restart none reverse pause",
+          markers: true,
+          autorotate: true,
+        },
       }
-    )
+    );
+    gsap.fromTo(
+      modelRef.current.rotation,
+      { y: -0.75 },
+      {
+        y:-0.01,
+        scrollTrigger: {
+          trigger: "#scroll-container",
+          start: "top 59%",
+          end: "+=400",
+          scrub: true,
+          toggleActions: "restart none reverse pause",
+          markers: true,
+          autorotate: true,
+        },
+      }
+    );
+    gsap.fromTo(
+      modelRef.current.rotation,
+      { z: 0.35 },
+      {
+        z:0,
+        scrollTrigger: {
+          trigger: "#scroll-container",
+          start: "top 59%",
+          end: "+=400",
+          scrub: true,
+          toggleActions: "restart none reverse pause",
+          markers: true,
+          autorotate: true,
+        },
+      }
+    );
 
     return () => {
       ScrollTrigger.getAll().forEach(trigger => trigger.kill())
     }
-  }, [])
+  }, []);
 
   return (
     <>
@@ -53,13 +83,12 @@ export default function Scene({ ...props }) {
               rotation={[0.05, -0.02, 0]}
             />
             <group 
-              ref={modelRef}
               name="Eve" 
               position={[71, 14, -522.71]}
               rotation={[0.22, 0, 0]}
               scale={1.8}
             >
-              <group name="eva whole" position={[11.42, 101.55, 420.36]} rotation={[-0.15, -0.75, 0]}>
+              <group ref={modelRef} name="eva whole" position={[11.42, 101.55, 420.36]} rotation={[-0.15, 0.75, 0]}>
                 <mesh
                   name="Body 5"
                   geometry={nodes['Body 5'].geometry}

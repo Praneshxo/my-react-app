@@ -21,7 +21,7 @@ export default function Scene({ ...props }) {
         x: -70,
         scrollTrigger: {
           trigger: "#scroll-container",
-          start: "top 59%",
+          start: "top 74%",
           end: "+=400",
           scrub: true,
           toggleActions: "restart none reverse pause",

@@ -102,7 +102,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    height: 400vh;
+    height: 410vh;
     padding: 50px;
     
     position: relative;
@@ -117,7 +117,7 @@ body {
     margin-top: -4.7rem;
     background-color: #fff;
     box-shadow: inset -2px -5px 3px rgba(168, 24, 24, 0.925);
-    z-index: 30 !important;
+    z-index: 40 !important;
   }
   .home-content {
     z-index: 1;
@@ -179,7 +179,7 @@ body {
     margin-bottom: -5rem;
     margin-top: -20rem;
     transform: translate3d(-300px, 0, 0);
-    z-index: -20;
+    z-index: 20 !important;
   }
   /* eyes */
   .eyes{
@@ -295,9 +295,12 @@ body {
     height: 29rem;
     z-index: -4;
   }
-  Skills Section */
-  /* Home.css or a shared CSS file */
- 
+  .eva{
+    z-index: -10 !important;
+    background-color:gold;
+    position: relative;
+    margin-top: -20rem;
+  }
   .skills {
     z-index: 20 !important;
     height: 100vh;

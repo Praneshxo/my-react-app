@@ -13,7 +13,7 @@ const useBallAnimation = () => {
       scrollTrigger: {
         trigger: ".ball",
         start: "top 9%",
-        end: "+=1800",
+        end: "+=2390",
         scrub: true,
         toggleActions: "restart none reverse pause",
         markers: true,
@@ -175,8 +175,8 @@ const useBallAnimation = () => {
     timeline.to(ball, {
       motionPath: {
         path: [
-          { x: 882, y: 2302 },
-          { x: 886, y: 2371 }, // Bounce to the seventh rung
+          { x: 884, y: 2302 },
+          { x: 888, y: 2371 }, // Bounce to the seventh rung
         ],
         autoRotate: true,
       },
@@ -186,14 +186,25 @@ const useBallAnimation = () => {
     timeline.to(ball, {
       motionPath: {
         path: [
-          { x: 886, y: 2372 },
-          { x: 884, y: 2471 }, // Bounce to the seventh rung
+          { x: 884, y: 2372 },
+          { x: 888, y: 2471 }, // Bounce to the seventh rung
         ],
         autoRotate: true,
       },
       duration: 1.5,
       ease: "bounce.out", // Bounce easing for the seventh rung
-    });     
+    });
+    timeline.to(ball, {
+      motionPath: {
+        path: [
+          { x: 884, y: 2471 },
+          { x: 888, y: 3100 }, // Bounce to the eva
+        ],
+        autoRotate: true,
+      },
+      duration: 20,
+      ease: "power2.inOut",
+    });   
   }, []);
 };
 

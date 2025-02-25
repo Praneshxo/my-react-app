@@ -86,7 +86,7 @@ const App = () => {
           <div className="spline-container">
             <Spline
               ref={splineRef}
-              scene="public/untitled.spline"
+              scene="/untitled.spline"
             />
           </div>
           <h2 className="abm">About Me</h2>
@@ -120,12 +120,15 @@ const App = () => {
       </section>
     <div id='scroll-container'>
       <div className="eva"  style={{
-      zIndex: 22,
-      height: '19rem',
+      height: '20rem',
       width: 'auto',
       position: 'relative',
+      
     }} >
-         <Canvas>
+         <Canvas
+         style={{ background: 'transparent' }} // Make the canvas background transparent
+         gl={{ alpha: true }}
+         >
           <Scene />
         </Canvas>
       </div>

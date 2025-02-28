@@ -13,7 +13,7 @@ const useBallAnimation = () => {
       scrollTrigger: {
         trigger: ".ball",
         start: "top 9%",
-        end: "+=2390",
+        end: "+=2720",
         scrub: true,
         toggleActions: "restart none reverse pause",
         markers: true,
@@ -43,7 +43,7 @@ const useBallAnimation = () => {
         ],
         autoRotate: true,
       },
-      duration: 10,
+      duration: 14,
     });
 
     timeline.to(ball, {
@@ -54,7 +54,7 @@ const useBallAnimation = () => {
         ],
         autoRotate: true,
       },
-      duration: 10,
+      duration: 14,
     });
 
     timeline.to(ball, {
@@ -181,7 +181,7 @@ const useBallAnimation = () => {
         autoRotate: true,
       },
       duration: 1.5,
-      ease: "bounce.out", // Bounce easing for the seventh rung
+      ease: "power3.inOut", // Bounce easing for the seventh rung
     }); 
     timeline.to(ball, {
       motionPath: {
@@ -192,19 +192,89 @@ const useBallAnimation = () => {
         autoRotate: true,
       },
       duration: 1.5,
-      ease: "bounce.out", // Bounce easing for the seventh rung
+      ease: "power3.inOut", // Bounce easing for the seventh rung
+    });
+    
+    timeline.to(ball, {
+      motionPath: {
+        path: [
+          { x: 888, y: 2471 },
+          { x: 888, y: 2700 }, // Bounce to the eva
+        ],
+      },
+      duration:2,
+      
     });
     timeline.to(ball, {
       motionPath: {
         path: [
-          { x: 884, y: 2471 },
+          { x: 888, y: 2700 },
+          { x: 888, y: 3000 }, // Bounce to the eva
+        ],
+      },
+      duration:2,
+      
+    });
+    timeline.to(ball, {
+      motionPath: {
+        path: [
+          { x: 888, y: 3000 },
           { x: 888, y: 3100 }, // Bounce to the eva
         ],
-        autoRotate: true,
       },
-      duration: 20,
-      ease: "power2.inOut",
-    });   
+      duration:2,
+      
+    });
+    timeline.to(ball, {
+      motionPath: {
+        path: [
+          { x: 888, y: 3100 },
+          { x: 688, y: 3100 }, // Bounce to the eva
+        ],
+      },
+      duration:2,
+      
+    });
+    timeline.to(ball, {
+      motionPath: {
+        path: [
+          { x: 688, y: 3100 },
+          { x: 680, y: 3100 }, // Bounce to the eva
+        ],
+      },
+      duration:2,
+      
+    });
+    timeline.to(ball, {
+      motionPath: {
+        path: [
+          { x: 680, y: 3100 },
+          { x: 580, y: 3100 }, // Bounce to the eva
+        ],
+      },
+      duration:2,
+      
+    });
+    timeline.to(ball, {
+      motionPath: {
+        path: [
+          { x: 580, y: 3100 },
+          { x: 500, y: 3140 }, // Bounce to the eva
+        ],
+      },
+      duration:2,
+      
+    });
+    timeline.to(ball, {
+      motionPath: {
+        path: [
+          { x: 500, y: 3140 },
+          { x: 480, y: 3180 }, // Bounce to the eva
+        ],
+      },
+      duration:2,
+      
+    });
   }, []);
 };
 

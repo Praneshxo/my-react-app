@@ -7,6 +7,7 @@ import useTextAnimation from './useTextAnimation';
 import useLineAnimation from './useLineAnimation';
 import use3DObjectAnimation from './ObjectAnimation'; 
 import Scene from './Scene'
+import Slime from './slime'
 import { Canvas } from '@react-three/fiber'
 import './Home.css';
 
@@ -15,6 +16,7 @@ const App = () => {
   const titleRef1 = useRef(null);
   const titleRef2 = useRef(null);
   const splineRef = useRef(null);
+  
 
   // Call the hooks here
   use3DObjectAnimation();
@@ -83,12 +85,24 @@ const App = () => {
 
           <img src="src/assets/hand.png" alt="hand" className="hand" />
           {/* Add the Spline 3D model */}
-          <div className="spline-container">
-            <Spline
-              ref={splineRef}
-              scene="/untitled.spline"
-            />
-          </div>
+          <div id='slime'>
+      <div className="slime-c"  style={{
+      height: '50rem',
+      width: 'auto',
+      position: 'relative',
+      background: 'transparent', // Make the canvas background transparent
+      overflow: 'hidden', // Hide overflow to prevent scrollbars
+      
+    }} >
+         <div
+         style={{ background: 'transparent' }} // Make the canvas background transparent
+         
+         >
+          <Slime />
+        </div>
+      </div>
+    </div>
+          
           <h2 className="abm">About Me</h2>
           <p className="abp">
             I'm a passionate developer with over 5 years of experience crafting elegant solutions to complex problems. My journey began when I built my first website at 15, and since then, I've been constantly learning and evolving.
@@ -134,10 +148,13 @@ const App = () => {
       </div>
     </div>
       {/* About Section */}
-      <div id="about" className="about"></div>
+      
     
       {/* Projects Section */}
-      <section id="projects" className="projects">
+      <div className="projects">
+        <center>
+        <h1 className='myw'>My Works</h1>
+        </center>
         <div className="mypro">
           <div className="card">
             <div className="tools">
@@ -199,7 +216,7 @@ const App = () => {
             </div>
           </div>
         </div>
-      </section>
+      </div>
 
       <footer className="footer">
         <form action="" className="form">

@@ -73,6 +73,8 @@ body {
   }
   .header .nav{
     margin-right: 3rem;
+    width: auto;
+    height: 2rem;
   }
   .header .nav a {
     margin-left: 3rem;
@@ -102,22 +104,21 @@ body {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    height: 410vh;
+    height: 400vh;
     padding: 50px;
     
     position: relative;
     overflow: hidden;
   }
   .ball{
-    background: radial-gradient(circle at 10px 100px, #ff5c5c, #dd3232);
+    background-color: radial-gradient(circle at 65% 15%, rgb(185, 13, 13) 0.5px, rgb(136, 25, 5) 3%, rgb(150, 14, 14) 60%, rgb(190, 46, 2) 100%);
+    background: radial-gradient(circle at 65% 15%, rgb(156, 12, 12) 0.5px, rgb(238, 54, 22) 3%, rgb(148, 14, 14) 60%, rgb(190, 46, 2) 100%);;
     width: 1.3rem;
     height: 1.3rem;
     border-radius: 50%;
     margin-left: 30rem;
     margin-top: -4.7rem;
-    background-color: #fff;
-    box-shadow: inset -2px -5px 3px rgba(168, 24, 24, 0.925);
-    z-index: 40 !important;
+    
   }
   .home-content {
     z-index: 1;
@@ -129,7 +130,7 @@ body {
   font-style: normal;
     font-size: 8rem;
     margin-left: 8rem;
-    margin-top: -20rem;
+    margin-top: -25rem;
     
     
   }
@@ -180,6 +181,24 @@ body {
     margin-top: -20rem;
     transform: translate3d(-300px, 0, 0);
     z-index: 20 !important;
+  }
+  .slime-c{
+    width: 10rem;
+    height: 20rem;
+    margin-bottom: -5rem;
+    margin-top: -20rem;
+    transform: translate3d(-700px, 0, 0);
+    z-index: 20 !important;
+    overflow: hidden;
+  }
+  .slime{
+    width: 10rem;
+    height: 20rem;
+    margin-bottom: -5rem;
+    margin-top: -20rem;
+    transform: translate3d(-700px, 0, 0);
+    
+    overflow: hidden;
   }
   /* eyes */
   .eyes{
@@ -297,16 +316,16 @@ body {
   }
   .eva{
     z-index: -10 !important;
-    background-color:gold;
+    
     position: relative;
-    margin-top: -20rem;
+    margin-top: -24rem;
   }
   .skills {
     z-index: 20 !important;
     height: 100vh;
     margin-top: -30rem;
     padding: 50px 20px;
-    background-color: #1c1c1c;
+    background-color: #3d89c7;
     color: #fff;
     text-align: center;
   }
@@ -374,18 +393,30 @@ body {
  
   /* Projects Section */
   .projects {
-    background-color: #f4f4f4;
-    height: 70vh;
-    display: flex;
+    color: floralwhite;
+    background-color: #0f0f0f;
+    height: 110vh;
     justify-content: center; /* Centers the content horizontally in the section */
    align-items: center;
-   margin-top: 20rem;
+   align-content: center;
+   margin-top: 4rem;
+   
+  }
+  .myw{
+    z-index: 40 !important;
+    font-size: 10rem;
+    margin-top: -28rem;  
+    align-content: center;
+    justify-content: center;
   }
   .mypro{
+    margin-top: 20rem;
+    background-color: #0f0f0f;
     display: flex;
     flex-direction:row;
     gap: 2rem; /* Add some space between the cards */
   width: 100%;
+  
   }
   .project-card-1,.project-card-2,.project-card-3{
     width: 32rem;
@@ -806,6 +837,7 @@ body {
 @media screen and (max-width: 380px) {
   .home h1 {
     font-size: 2.5rem;
+    
   }
 
   .header .nav {

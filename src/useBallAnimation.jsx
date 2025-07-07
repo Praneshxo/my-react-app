@@ -13,7 +13,7 @@ const useBallAnimation = () => {
       scrollTrigger: {
         trigger: ".ball",
         start: "top 9%",
-        end: "+=2720",
+        end: "+=2860",
         scrub: true,
         toggleActions: "restart none reverse pause",
         markers: true,
@@ -202,7 +202,7 @@ const useBallAnimation = () => {
           { x: 888, y: 2700 }, // Bounce to the eva
         ],
       },
-      duration:2,
+      duration:3,
       
     });
     timeline.to(ball, {
@@ -229,7 +229,27 @@ const useBallAnimation = () => {
       motionPath: {
         path: [
           { x: 888, y: 3100 },
-          { x: 688, y: 3100 }, // Bounce to the eva
+          { x: 688, y: 3098 }, // Bounce to the eva
+        ],
+      },
+      duration:1,
+      
+    });
+    timeline.to(ball, {
+      motionPath: {
+        path: [
+          { x: 680, y: 3098 },
+          { x: 580, y: 3097 }, // Bounce to the eva
+        ],
+      },
+      duration:1,
+      
+    });
+    timeline.to(ball, {
+      motionPath: {
+        path: [
+          { x: 580, y: 3097 },
+          { x: 428, y: 3096 }, // Bounce to the eva
         ],
       },
       duration:2,
@@ -238,43 +258,20 @@ const useBallAnimation = () => {
     timeline.to(ball, {
       motionPath: {
         path: [
-          { x: 688, y: 3100 },
-          { x: 680, y: 3100 }, // Bounce to the eva
+          { x: 424, y: 3096 },
+          { x: 420, y: 3080 }, // Bounce to the eva
         ],
       },
       duration:2,
       
     });
     timeline.to(ball, {
-      motionPath: {
-        path: [
-          { x: 680, y: 3100 },
-          { x: 580, y: 3100 }, // Bounce to the eva
-        ],
-      },
-      duration:2,
+      scale:200,
+      background: "#0f0f0f", 
+      duration: 10,
       
     });
-    timeline.to(ball, {
-      motionPath: {
-        path: [
-          { x: 580, y: 3100 },
-          { x: 500, y: 3140 }, // Bounce to the eva
-        ],
-      },
-      duration:2,
-      
-    });
-    timeline.to(ball, {
-      motionPath: {
-        path: [
-          { x: 500, y: 3140 },
-          { x: 480, y: 3180 }, // Bounce to the eva
-        ],
-      },
-      duration:2,
-      
-    });
+    
   }, []);
 };
 

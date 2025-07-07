@@ -34,3 +34,5 @@ const Model3D = ({ modelPath }) => {
 };
 
 export default Model3D;
+
+

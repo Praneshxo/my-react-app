@@ -11,10 +11,10 @@ export default function Scene({ ...props }) {
   const modelRef = useRef()
 
   useEffect(() => {
+     
     if (!modelRef.current) return
-
     
-    gsap.fromTo(
+    const positionTween = gsap.fromTo(
       modelRef.current.position,
       { x: 91 },
       {
@@ -25,12 +25,12 @@ export default function Scene({ ...props }) {
           end: "+=200",
           scrub: true,
           toggleActions: "restart none reverse pause",
-          markers: true,
-          autorotate: true,
+          markers: true, // Note: autorotate is not a valid ScrollTrigger property. It's for MotionPath.
         },
       }
     );
-    gsap.fromTo(
+
+    const rotationYTween = gsap.fromTo(
       modelRef.current.rotation,
       { y: -0.75 },
       {
@@ -42,11 +42,11 @@ export default function Scene({ ...props }) {
           scrub: true,
           toggleActions: "restart none reverse pause",
           markers: true,
-          autorotate: true,
         },
       }
     );
-    gsap.fromTo(
+
+    const rotationZTween = gsap.fromTo(
       modelRef.current.rotation,
       { z: 0.35 },
       {
@@ -58,14 +58,18 @@ export default function Scene({ ...props }) {
           scrub: true,
           toggleActions: "restart none reverse pause",
           markers: true,
-          autorotate: true,
         },
       }
     );
 
+    // --- Cleanup Function ---
+    // This is crucial in React. It kills the tweens and their associated 
+    // ScrollTriggers when the component unmounts, preventing conflicts.
     return () => {
-      ScrollTrigger.getAll().forEach(trigger => trigger.kill())
-    }
+      positionTween.kill();
+      rotationYTween.kill();
+      rotationZTween.kill();
+    };
   }, []);
 
   return (
@@ -191,11 +195,12 @@ export default function Scene({ ...props }) {
                 </group>
               </group>
             </group>
-            <OrthographicCamera name="1" makeDefault={false} far={100000} near={-10000} />
-            <hemisphereLight name="Default Ambient Light" intensity={0.75} color="#eaeaea" />
+            
+            
           </scene>
         </group>
       </group>
     </>
+    
   )
 }

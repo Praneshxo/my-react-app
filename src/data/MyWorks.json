@@ -1,0 +1,41 @@
+[
+  {
+    "id": "project1",
+    "name": "Dashboard UI",
+    "thumbnail": "src/assets/Home Page.png",
+    "description": "A responsive dashboard UI built for data visualization.",
+    "techStack": ["React", "Chart.js", "Material-UI"],
+    "detailedDescription": "This project involved creating an intuitive and interactive dashboard interface. Key features include real-time data updates, customizable widgets, and a user-friendly layout. I focused on optimizing performance and ensuring cross-browser compatibility.",
+    "fullImages": [
+      "src/assets/dashboard_full_1.png",
+      "src/assets/dashboard_full_2.png"
+    ],
+    "myRole": "Lead Frontend Developer - Responsible for UI/UX implementation, component development, and integration with backend APIs."
+  },
+  {
+    "id": "project2",
+    "name": "E-commerce App",
+    "thumbnail": "src/assets/Landing Page.png",
+    "description": "A full-featured e-commerce application with product listings and checkout.",
+    "techStack": ["React", "Node.js", "Express", "MongoDB", "Redux"],
+    "detailedDescription": "Developed a complete e-commerce platform from scratch. This included user authentication, product management, shopping cart functionality, and secure payment processing. Implemented Redux for state management and ensured a smooth user experience across various devices.",
+    "fullImages": [
+      "src/assets/ecommerce_full_1.png",
+      "src/assets/ecommerce_full_2.png"
+    ],
+    "myRole": "Full Stack Developer - Handled both frontend and backend development, database design, and API creation."
+  },
+  {
+    "id": "project3",
+    "name": "Recipe App",
+    "thumbnail": "src/assets/recipie.png",
+    "description": "An application for discovering and managing recipes.",
+    "techStack": ["React", "Firebase", "CSS Modules"],
+    "detailedDescription": "Built a recipe application that allows users to search, save, and share recipes. Integrated with a third-party recipe API and utilized Firebase for backend services like authentication and data storage. Focused on a clean and intuitive design.",
+    "fullImages": [
+      "src/assets/recipe_full_1.png",
+      "src/assets/recipe_full_2.png"
+    ],
+    "myRole": "Frontend Developer - Implemented all frontend components, handled API integrations, and managed state."
+  }
+]

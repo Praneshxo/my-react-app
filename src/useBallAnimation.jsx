@@ -9,6 +9,12 @@ const useBallAnimation = () => {
   useEffect(() => {
     const ball = document.querySelector(".ball");
 
+    // It's good practice to ensure the element exists before animating it.
+    if (!ball) {
+      console.warn("'.ball' element not found for animation.");
+      return;
+    }
+
     const timeline = gsap.timeline({
       scrollTrigger: {
         trigger: ".ball",
@@ -272,6 +278,12 @@ const useBallAnimation = () => {
       
     });
     
+    // --- Cleanup Function ---
+    // This is crucial in React. It kills the timeline and its associated 
+    // ScrollTrigger when the component unmounts, preventing conflicts.
+    return () => {
+      timeline.kill();
+    };
   }, []);
 };
 

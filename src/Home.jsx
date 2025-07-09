@@ -1,58 +1,67 @@
+// src/App.jsx (Renamed from Home.jsx based on common practice)
 import React, { useRef, useEffect } from 'react';
-import Spline from '@splinetool/react-spline';
+import Spline from '@splinetool/react-spline'; // Keep if you're using it elsewhere or in a dedicated component
 import gsap from 'gsap';
+
+import { Canvas } from '@react-three/fiber';
+
+// Import your custom hooks
 import useMouseMoveEffect from './useMouseMoveEffect';
 import useBallAnimation from './useBallAnimation';
 import useTextAnimation from './useTextAnimation';
 import useLineAnimation from './useLineAnimation';
-import use3DObjectAnimation from './ObjectAnimation'; 
-import Scene from './Scene'
-import Slime from './slime'
-import { Canvas } from '@react-three/fiber'
-import './Home.css';
+// import use3DObjectAnimation from './ObjectAnimation';
+
+// Import your components
+import ProjectsSection from './Components/ProjectsSection';
+import TechStack from './Components/TechStack';
+import WorkExperience from './Components/WorkExperience';
+import Slime from './slime'; // Import the Slime component
+import Scene from './Scene'; // Your Three.js scene
+
+import './Home.css'; // Keep your main styling, but also use component-specific CSS
 
 const App = () => {
   const blurryBackgroundRef = useRef(null);
   const titleRef1 = useRef(null);
   const titleRef2 = useRef(null);
-  const splineRef = useRef(null);
-  
+  // const splineRef = useRef(null); // Keep if Spline is used in a specific section/component
 
   // Call the hooks here
-  use3DObjectAnimation();
+  // use3DObjectAnimation();
   useMouseMoveEffect(blurryBackgroundRef);
   useBallAnimation();
   useTextAnimation([titleRef1, titleRef2]);
-  useLineAnimation(); // Use the line animation hook
+  useLineAnimation();
 
-  useEffect(() => {
-    if (splineRef.current) {
-      // Rotate the model continuously
-      const model = splineRef.current;
-      gsap.to(splineRef.current.rotation, {
-        y: "+=6.28", // 360 degrees (2π radians)
-        duration: 10, // Time for one full rotation
-        repeat: -1, // Repeat indefinitely
-        ease: "linear", 
-        autoRotate: true,// Constant speed
-      });
+  // You can move the Spline animation logic into a dedicated SplineModel component if it becomes complex
+  // useEffect(() => {
+  //   if (splineRef.current) {
+  //     // Rotate the model continuously
+  //     const model = splineRef.current;
+  //     gsap.to(splineRef.current.rotation, {
+  //       y: "+=6.28", // 360 degrees (2π radians)
+  //       duration: 10, // Time for one full rotation
+  //       repeat: -1, // Repeat indefinitely
+  //       ease: "linear", 
+  //       autoRotate: true,// Constant speed
+  //     });
 
-      // Move the model from left to right continuously
-      gsap.to(splineRef.current.position, {
-        x: 5, // Move to the right (adjust as necessary)
-        duration: 5, // Duration of movement to the right
-        repeat: -1, // Repeat indefinitely
-        yoyo: true, // Move back and forth
-        ease: "power1.inOut",
-        autoRotate: true, // Smooth easing
-      });
-    }
-  }, []);
-
+  //     // Move the model from left to right continuously
+  //     gsap.to(splineRef.current.position, {
+  //       x: 5, // Move to the right (adjust as necessary)
+  //       duration: 5, // Duration of movement to the right
+  //       repeat: -1, // Repeat indefinitely
+  //       yoyo: true, // Move back and forth
+  //       ease: "power1.inOut",
+  //       autoRotate: true, // Smooth easing
+  //     });
+  //   }
+  // }, []);
 
   return (
     <div>
-      {/* Header */}
+       {/* Header */}
       <header className="header">
         <div className="logo">Pranesh</div>
         <nav className="nav">
@@ -63,6 +72,7 @@ const App = () => {
           <a href="#contact">Contact</a>
         </nav>
       </header>
+      
 
       <div className="grain"></div>
 
@@ -81,11 +91,9 @@ const App = () => {
             </p>
           </div>
 
-          
-
           <img src="src/assets/hand.png" alt="hand" className="hand" />
-          {/* Add the Spline 3D model */}
-          <div id='slime'>
+
+ <div id='slime'>
       <div className="slime-c"  style={{
       height: '50rem',
       width: 'auto',
@@ -102,7 +110,9 @@ const App = () => {
         </div>
       </div>
     </div>
-          
+          {/* If Spline is only for one section, you can wrap it in its own component */}
+          {/* <Spline scene="your-spline-scene-url" ref={splineRef} /> */}
+
           <h2 className="abm">About Me</h2>
           <p className="abp">
             I'm a passionate developer with over 5 years of experience crafting elegant solutions to complex problems. My journey began when I built my first website at 15, and since then, I've been constantly learning and evolving.
@@ -132,113 +142,20 @@ const App = () => {
           <img src="src/assets/cloud.png" className="cloud5" />
         </div>
       </section>
-    <div id='scroll-container'>
-      <div className="eva"  style={{
-      height: '20rem',
-      width: 'auto',
-      position: 'relative',
-      
-    }} >
-         <Canvas
-         style={{ background: 'transparent' }} // Make the canvas background transparent
-         gl={{ alpha: true }}
-         >
-          <Scene />
-        </Canvas>
-      </div>
-    </div>
-      {/* About Section */}
-      
-    
-      {/* Projects Section */}
-      <div className="projects">
-        <center>
-        <h1 className='myw'>My Works</h1>
-        </center>
-        <div className="mypro">
-          <div className="card">
-            <div className="tools">
-              <div className="circle">
-                <span className="red box"></span>
-              </div>
-              <div className="circle">
-                <span className="yellow box"></span>
-              </div>
-              <div className="circle">
-                <span className="green box"></span>
-              </div>
-            </div>
-            <div className="card__content">
-              <div className="project-card-1">
-                <img src="src/assets/Home Page.png" className="Agape" />
-                <h3>Dashboard UI</h3>
-              </div>
-            </div>
-          </div>
 
-          <div className="card">
-            <div className="tools">
-              <div className="circle">
-                <span className="red box"></span>
-              </div>
-              <div className="circle">
-                <span className="yellow box"></span>
-              </div>
-              <div className="circle">
-                <span className="green box"></span>
-              </div>
-            </div>
-            <div className="card__content">
-              <div className="project-card-2">
-                <img src="src/assets/Landing Page.png" className="E-commerce" />
-                <h3>E-commerce App</h3>
-              </div>
-            </div>
-          </div>
-
-          <div className="card">
-            <div className="tools">
-              <div className="circle">
-                <span className="red box"></span>
-              </div>
-              <div className="circle">
-                <span className="yellow box"></span>
-              </div>
-              <div className="circle">
-                <span className="green box"></span>
-              </div>
-            </div>
-            <div className="card__content">
-              <div className="project-card-3">
-                <img src="src/assets/recipie.png" className="recipie" />
-                <h3>Recipe App</h3>
-              </div>
-            </div>
-          </div>
+      <div id='scroll-container'>
+        <div className="eva" style={{ height: '20rem', width: 'auto', position: 'relative' }}>
+          <Canvas style={{ background: 'transparent' }} gl={{ alpha: true }}>
+            <Scene />
+          </Canvas>
         </div>
       </div>
 
-      <footer className="footer">
-        <form action="" className="form">
-          <p>
-            Let's Chat<span>Have a project in mind? Let’s create something amazing.</span>
-          </p>
-          <input type="email" placeholder="Email" className="email"></input>
-          <input type="chat" placeholder="Chat with me" className="chat"></input>
-          <button className="oauthButton">
-            Continue
-            <svg className="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="m6 17 5-5-5-5"></path>
-              <path d="m13 17 5-5-5-5"></path>
-            </svg>
-          </button>
-          <div className="contact-icons">
-            <a href="#" title="GitHub">🔗</a>
-            <a href="#" title="LinkedIn">🔗</a>
-            <a href="#" title="Twitter">🔗</a>
-          </div>
-        </form>
-      </footer>
+      <TechStack /> {/* Your new Tech Stack section */}
+      <WorkExperience /> {/* Your new Work Experience section */}
+      <ProjectsSection /> {/* Your refactored Projects section */}
+
+      
     </div>
   );
 };
